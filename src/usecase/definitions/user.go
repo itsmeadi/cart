@@ -3,7 +3,7 @@ package definitions
 
 import (
 	"context"
-	"github.com/itsme/nuc/src/entities/models"
+	"github.com/itsme/cart/src/entities/models"
 )
 
 type User interface {

@@ -6,7 +6,7 @@ import (
 "encoding/json"
 "errors"
 "fmt"
-	"github.com/itsme/nuc/src/entities/models"
+	"github.com/itsme/cart/src/entities/models"
 	"io/ioutil"
 	"log"
 	"net/http"

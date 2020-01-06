@@ -2,10 +2,10 @@ package cart
 
 import (
 	"context"
-	"github.com/itsme/nuc/src/domain/repositories"
-	"github.com/itsme/nuc/src/entities/constants"
-	"github.com/itsme/nuc/src/entities/models"
-	"github.com/itsme/nuc/src/usecase/definitions"
+	"github.com/itsme/cart/src/domain/repositories"
+	"github.com/itsme/cart/src/entities/constants"
+	"github.com/itsme/cart/src/entities/models"
+	"github.com/itsme/cart/src/usecase/definitions"
 )
 
 type CartUseCase struct {

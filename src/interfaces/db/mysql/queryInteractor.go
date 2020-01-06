@@ -3,9 +3,9 @@ package mysql
 import (
 	"context"
 	"database/sql"
-	"github.com/itsme/nuc/src/domain/repositories"
+	"github.com/itsme/cart/src/domain/repositories"
 
-	"github.com/itsme/nuc/src/entities/models"
+	"github.com/itsme/cart/src/entities/models"
 )
 
 var _ repositories.CartItems = &DB{}

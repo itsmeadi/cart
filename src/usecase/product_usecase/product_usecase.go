@@ -2,8 +2,8 @@ package product_usecase
 
 import (
 	"context"
-	"github.com/itsme/nuc/src/domain/repositories"
-	"github.com/itsme/nuc/src/entities/models"
+	"github.com/itsme/cart/src/domain/repositories"
+	"github.com/itsme/cart/src/entities/models"
 )
 
 type Product struct {
