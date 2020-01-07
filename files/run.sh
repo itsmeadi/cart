@@ -2,5 +2,5 @@
 
 /etc/init.d/mysql start
 
-go build -o main ./src
-./main
+go build -o app .
+./app
