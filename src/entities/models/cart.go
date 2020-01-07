@@ -29,19 +29,18 @@ type CartXCartItems struct {
 }
 
 type CartDetail struct {
-	CartID   int64     `json:"cart_id" db:"cart_id"`
-	UserID   int64     `json:"user_id" db:"user_id"`
+	CartID     int64 `json:"cart_id" db:"cart_id"`
+	UserID     int64 `json:"user_id" db:"user_id"`
 	TotalPrice float64
-	Products []CartProduct `json:"products"`
+	Products   []CartProduct `json:"products"`
 }
 type CartProduct struct {
 	Product
-	Qty int64 `json:"qty" db:"qty"`
+	Qty        int64 `json:"qty" db:"qty"`
 	TotalPrice float64
-
 }
 
-type User struct{
-	ID int64 `db:"id"`
+type User struct {
+	ID  int64  `db:"id"`
 	Sub string `db:"sub"`
 }

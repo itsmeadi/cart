@@ -2,7 +2,7 @@ package mysql
 
 import (
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/itsme/cart/src/entities/config"
+	"github.com/itsmeadi/cart/src/entities/config"
 	sql "github.com/jmoiron/sqlx"
 	//"database/sql"
 	"log"

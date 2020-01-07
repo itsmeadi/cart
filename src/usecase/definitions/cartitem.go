@@ -6,4 +6,3 @@ type CartItems interface {
 	//UpdateCartQty(ctx context.Context, qty, cartId, productId int64) (int64, error)
 
 }
-

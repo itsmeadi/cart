@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"context"
-	"github.com/itsme/nuc/src/entities/models"
+	"github.com/itsmeadi/cart/src/entities/models"
 )
 
 type CartXCartItems interface {

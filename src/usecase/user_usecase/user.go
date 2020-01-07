@@ -2,17 +2,17 @@ package user_usecase
 
 import (
 	"context"
-	"github.com/itsme/cart/src/domain/repositories"
-	"github.com/itsme/cart/src/entities/models"
+	"github.com/itsmeadi/cart/src/domain/repositories"
+	"github.com/itsmeadi/cart/src/entities/models"
 )
 
 type User struct {
 	UserRepo repositories.User
 }
 
-func InitUsecase(repo repositories.User)*User{
+func InitUsecase(repo repositories.User) *User {
 	return &User{
-		UserRepo:repo,
+		UserRepo: repo,
 	}
 }
 func (userUC *User) GetUserBySub(ctx context.Context, sub string) (models.User, error) {

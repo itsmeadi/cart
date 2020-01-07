@@ -1,16 +1,15 @@
 package productByCategory
 
-
 import (
-"context"
-"encoding/json"
-"errors"
-"fmt"
-	"github.com/itsme/cart/src/entities/models"
+	"context"
+	"encoding/json"
+	"errors"
+	"fmt"
+	"github.com/itsmeadi/cart/src/entities/models"
 	"io/ioutil"
 	"log"
 	"net/http"
-"time"
+	"time"
 )
 
 type ProductByCategory struct {
@@ -19,7 +18,6 @@ type ProductByCategory struct {
 }
 
 var ERRINVALIDRESPONSE = errors.New("Invalid Response")
-
 
 func InitService(url string, timeout int) ProductByCategory {
 	return ProductByCategory{
@@ -58,12 +56,10 @@ func (prod *ProductByCategory) GetProductListByCategoryId(ctx context.Context, i
 	return pRes, nil
 }
 
-
 func (prod *ProductByCategory) GetProductArrByCategoryId(ctx context.Context, id int64) ([]models.Product, error) {
 
 	var products []models.Product
 	var pRes1 models.ProductListResponse1
-
 
 	url := fmt.Sprintf("%+v/%+v", prod.Url, id)
 	req, err := http.NewRequest("GET", url, nil)
@@ -87,17 +83,16 @@ func (prod *ProductByCategory) GetProductArrByCategoryId(ctx context.Context, id
 		return products, ERRINVALIDRESPONSE
 	}
 
-	collectionInterface:=pRes1.Data.Page.Layouts[1].Value.Collection
+	collectionInterface := pRes1.Data.Page.Layouts[1].Value.Collection
 
-	js,err:=json.Marshal(collectionInterface)
+	js, err := json.Marshal(collectionInterface)
 
 	var collection models.Collection
 
-	err=json.Unmarshal(js, &collection)
+	err = json.Unmarshal(js, &collection)
 
-	products=collection.Products
+	products = collection.Products
 	//a:=collection["products"].
 
 	return products, err
 }
-

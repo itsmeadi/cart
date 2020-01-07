@@ -2,7 +2,7 @@ package definitions
 
 import (
 	"context"
-	"github.com/itsme/cart/src/entities/models"
+	"github.com/itsmeadi/cart/src/entities/models"
 )
 
 type Product interface {

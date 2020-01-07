@@ -2,10 +2,10 @@ package cart
 
 import (
 	"context"
-	"github.com/itsme/cart/src/domain/repositories"
-	"github.com/itsme/cart/src/entities/constants"
-	"github.com/itsme/cart/src/entities/models"
-	"github.com/itsme/cart/src/usecase/definitions"
+	"github.com/itsmeadi/cart/src/domain/repositories"
+	"github.com/itsmeadi/cart/src/entities/constants"
+	"github.com/itsmeadi/cart/src/entities/models"
+	"github.com/itsmeadi/cart/src/usecase/definitions"
 )
 
 type CartUseCase struct {
@@ -178,7 +178,7 @@ func (cart *CartUseCase) RemoveProductFromCart(ctx context.Context, productId, u
 	if err != nil || len(crt) == 0 {
 		return err
 	}
-	productId=4
+	productId = 4
 	_, err = cart.CartItemsRepo.UpdateCartQty(ctx, 0, crt[0].ID, productId)
 	return err
 }
@@ -196,7 +196,7 @@ func (cart *CartUseCase) GetCart(ctx context.Context, userId int64) (models.Cart
 	cDetail.CartID = cartItems[0].CartID
 	products := make([]models.CartProduct, 0)
 	for _, item := range cartItems {
-		if item.Qty<=0{
+		if item.Qty <= 0 {
 			continue
 		}
 		var cartProd models.CartProduct
