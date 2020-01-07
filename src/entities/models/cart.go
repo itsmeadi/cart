@@ -39,8 +39,3 @@ type CartProduct struct {
 	Qty        int64 `json:"qty" db:"qty"`
 	TotalPrice float64
 }
-
-type User struct {
-	ID  int64  `db:"id"`
-	Sub string `db:"sub"`
-}

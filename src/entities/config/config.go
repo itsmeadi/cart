@@ -27,6 +27,13 @@ type Conf struct {
 	PrdCache    ProductCache
 	ProductList ProductList
 	DB          DBConfig
+	GAuth       GoogleCredentials
+}
+
+type GoogleCredentials struct {
+	Cid     string
+	Csecret string
+	RedirectUrl string
 }
 
 type DBConfig struct {

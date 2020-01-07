@@ -5,6 +5,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"github.com/gorilla/sessions"
+	"github.com/itsmeadi/cart/src/entities/config"
 	"github.com/itsmeadi/cart/src/entities/models"
 	"github.com/itsmeadi/cart/src/templatego"
 	"golang.org/x/oauth2"
@@ -16,30 +17,9 @@ import (
 )
 
 const (
-	SessionKey  = "ntuc"
-	errorFormat = "[sessions] ERROR! %s\n"
+	SessionKey = "ntuc"
 )
 
-// Credentials which stores google ids.
-type Credentials struct {
-	Cid     string `json:"cid"`
-	Csecret string `json:"csecret"`
-}
-
-// User is a retrieved and authentiacted user.
-type User struct {
-	Sub           string `json:"sub"`
-	Name          string `json:"name"`
-	GivenName     string `json:"given_name"`
-	FamilyName    string `json:"family_name"`
-	Profile       string `json:"profile"`
-	Picture       string `json:"picture"`
-	Email         string `json:"email"`
-	EmailVerified string `json:"email_verified"`
-	Gender        string `json:"gender"`
-}
-
-var cred Credentials
 var conf *oauth2.Config
 var state string
 var store = sessions.NewCookieStore([]byte("secret"))
@@ -51,20 +31,11 @@ func randToken() string {
 }
 
 func init() {
-	//file, err := ioutil.ReadFile("./creds.json")
-	//if err != nil {
-	//	log.Printf("File error: %v\n", err)
-	//	os.Exit(1)
-	//}
-	//json.Unmarshal(file, &cred)
-	//
 
-	cred.Cid = `505592410251-3c6j54kt3u9ksop1eoe1vsffdhd3egur.apps.googleusercontent.com`
-	cred.Csecret = `gHREtDeHSPfeehqON08Cig1W`
 	conf = &oauth2.Config{
-		ClientID:     cred.Cid,
-		ClientSecret: cred.Csecret,
-		RedirectURL:  "http://127.0.0.1:9090/auth",
+		ClientID:     config.GetConfig().GAuth.Cid,
+		ClientSecret: config.GetConfig().GAuth.Csecret,
+		RedirectURL:  config.GetConfig().GAuth.RedirectUrl,
 		Scopes: []string{
 			"https://www.googleapis.com/auth/userinfo.email", // You have to select your own scope from here -> https://developers.google.com/identity/protocols/googlescopes#google_sign-in
 		},
@@ -221,37 +192,3 @@ func (api *API) googleLoginHandler(w http.ResponseWriter, r *http.Request) {
 
 	}
 }
-
-//
-//func (api *API) loginHandler(w http.ResponseWriter, r *http.Request) {
-//
-//	state = randToken()
-//	session, err := store.Get(r, SessionKey)
-//	if err != nil {
-//		log.Println(err)
-//		AbortWithError(http.StatusBadRequest, err, &w)
-//		return
-//	}
-//	session.Values["state"] = state
-//	err = session.Save(r, w)
-//	if err != nil {
-//		AbortWithError(http.StatusInternalServerError, err, &w)
-//		return
-//	}
-//	w.Write([]byte("<html><title>Golang Google</title> <body> <a href='" + getLoginURL(state) + "'><button>Login with Google!</button> </a> </body></html>"))
-//}
-
-//
-//func main() {
-//	router := gin.Default()
-//	router.Use(sessions.Sessions("goquestsession", store))
-//	router.Static("/css", "./static/css")
-//	router.Static("/img", "./static/img")
-//	router.LoadHTMLGlob("./templates/*")
-//
-//	router.GET("/", indexHandler)
-//	router.GET("/login", loginHandler)
-//	router.GET("/auth", authHandler)
-//
-//	router.Run("127.0.0.1:9090")
-//}
