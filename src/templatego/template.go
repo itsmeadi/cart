@@ -3,12 +3,16 @@ package templatego
 import (
 	"html/template"
 	"log"
+	"os"
 )
 
 var TemplateMap map[string]*template.Template
-var base = "./frontend/vegefoods/"
 
 func init() {
+
+	GOPATH := os.Getenv("GOPATH")
+
+	var base = GOPATH + "/src/github.com/itsmeadi/cart/frontend/vegefoods/"
 
 	TemplateMap = make(map[string]*template.Template)
 	myTemplates := make(map[string]string)
