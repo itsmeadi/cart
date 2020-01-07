@@ -1,5 +1,12 @@
 package config
 
+import (
+	"gopkg.in/gcfg.v1"
+	"io/ioutil"
+	"log"
+	"os"
+)
+
 type Product struct {
 	Url     string
 	Timeout int //millisecond
@@ -26,22 +33,36 @@ type DBConfig struct {
 	DBStr string
 }
 
-func InitConfig() Conf {
-	return Conf{
-		Product: Product{
-			Url:     `https://raw.githubusercontent.com/ntuc-social-enterprises/api-mock/master/challenge-1/product`,
-			Timeout: 50000,
-		},
-		ProductList: ProductList{
-			Url:     `https://raw.githubusercontent.com/ntuc-social-enterprises/api-mock/master/challenge-1/category`,
-			Timeout: 50000,
-		},
-		DB: DBConfig{
-			DBStr: "root:@/NTUC?parseTime=true&loc=Local",
-		},
-		PrdCache: ProductCache{
-			Timeout:           10,
-			CacheResetTimeOut: 100,
-		},
+var CF *Conf
+
+func init() {
+	CF = &Conf{}
+	GOPATH := os.Getenv("GOPATH")
+	fname := GOPATH + "/src/github.com/itsmeadi/cart/files/config.ini"
+
+	ok := ReadConfig(CF, fname)
+	if !ok {
+		log.Fatal("Failed to read config file")
 	}
+}
+
+func ReadConfig(cfg *Conf, path string) bool {
+
+	configString, err := ioutil.ReadFile(path)
+	if err != nil {
+		log.Println("config.go [ReadFile] function ReadConfig", err)
+		return false
+	}
+	err = gcfg.ReadStringInto(cfg, string(configString))
+
+	if err != nil {
+		log.Println("config.go [ReadStringInto] function ReadConfig", err)
+		return false
+	}
+
+	return true
+}
+
+func GetConfig() *Conf {
+	return CF
 }
