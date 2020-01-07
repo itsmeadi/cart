@@ -1,5 +1,10 @@
 create database NTUC;
 
+use mysql;
+update user set plugin='' where User='root';
+flush privileges;
+
+use NTUC;
 create table NTUC.cart(
     id int(10) primary key auto_increment not null,
     user_id int(10) not null,
