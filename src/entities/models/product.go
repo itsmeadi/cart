@@ -12,6 +12,18 @@ type Product struct { //ProductDetail
 	} `json:"offers"`
 }
 
+type ProductResponse struct {
+	Product Product `json:"product"`
+}
+
+type ProductByCatResponse struct {
+	Products []Product `json:"products"`
+}
+
+type CartResponse struct {
+	Cart CartDetail `json:"cart"`
+}
+
 type ProductDetailResponse struct {
 	Code int `json:"code"`
 	Data struct {
@@ -54,6 +66,7 @@ type ProductListResponse1 struct {
 	} `json:"data"`
 	Status string `json:"status"`
 }
+
 type ProductListResponse2 struct {
 	Code int `json:"code"`
 	Data struct {

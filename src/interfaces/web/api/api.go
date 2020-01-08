@@ -28,16 +28,20 @@ type HandlerFunc func(rw http.ResponseWriter, r *http.Request) (interface{}, err
 
 func (api *API) InitRoutes(r *mux.Router) {
 
-	r.HandleFunc("/detail/{id}", api.ProductDetail)
-
+	//Rest APIs
+	r.HandleFunc("/product-detail/{id}", api.Wrapper(api.GetProductDetail))
 	r.HandleFunc("/product-list", api.Wrapper(api.GetProductList))
-	//r.HandleFunc("/login", api.loginHandler)
-	r.HandleFunc("/login", api.googleLoginHandler)
-	r.HandleFunc("/signout", api.logOut)
-	r.HandleFunc("/auth", api.authHandler)
+	r.HandleFunc("/get-cart", api.Auth(api.Wrapper(api.GetCart)))
+
 	r.HandleFunc("/add-to-cart", api.Auth(api.Wrapper(api.AddToCart)))
 	r.HandleFunc("/remove-from-cart", api.Auth(api.Wrapper(api.RemoveFromCart)))
 
+	r.HandleFunc("/login", api.googleLoginHandler)
+	r.HandleFunc("/signout", api.logOut)
+	r.HandleFunc("/auth", api.authHandler)
+
+	//FrontEnd APIs
+	r.HandleFunc("/detail/{id}", api.ProductDetail)
 	r.HandleFunc("/cart", api.Auth(api.ShowCart))
 	r.HandleFunc("/products", api.Auth(api.ProductList))
 

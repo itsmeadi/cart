@@ -76,7 +76,8 @@ func (api *API) GetCart(w http.ResponseWriter, r *http.Request) (interface{}, er
 		return nil, ErrUnAuthorized
 	}
 
-	return api.Interactor.Cart.GetCart(ctx, userId)
+	cart, err := api.Interactor.Cart.GetCart(ctx, userId)
+	return models.CartResponse{Cart: cart}, err
 }
 
 func (api *API) ShowCart(w http.ResponseWriter, r *http.Request) {

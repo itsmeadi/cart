@@ -38,17 +38,14 @@ func (api *API) Wrapper(hand func(w http.ResponseWriter, r *http.Request) (inter
 			resp.Res = res
 			j, err := json.Marshal(resp)
 			if err != nil {
-
 				log.Println("[Error while Marshall]Error in api=", err)
-
 			}
 			_, err = w.Write(j)
 
 			if err != nil {
-				log.Println("Error while Writing Response", err)
+				log.Println("Error while Writing Response=", err)
 			}
 		})
-
 }
 
 func GetUserId(ctx context.Context) int64 {

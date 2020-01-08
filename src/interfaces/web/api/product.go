@@ -55,18 +55,25 @@ func (api *API) GetProductList(w http.ResponseWriter, r *http.Request) (interfac
 	}
 
 	list, err := api.Interactor.ProductByCategory.GetProductArrByCategoryId(ctx, categoryId)
-	return list, err
+
+	productRes := models.ProductByCatResponse{
+		Products: list,
+	}
+	return productRes, err
 }
 
 func (api *API) GetProductDetail(w http.ResponseWriter, r *http.Request) (interface{}, error) {
 	ctx := r.Context()
+	vars := mux.Vars(r)
 
-	idStr := r.FormValue("id")
+	idStr := vars["id"]
+
 	id, err := strconv.ParseInt(idStr, 10, 64)
 	if err != nil || id == 0 {
 		return nil, errors.New("invalid product id")
 	}
 
-	list, err := api.Interactor.Product.GetProductDetailById(ctx, id)
-	return list, err
+	prod, err := api.Interactor.Product.GetProductDetailById(ctx, id)
+	productRes := models.ProductResponse{Product: prod}
+	return productRes, err
 }
