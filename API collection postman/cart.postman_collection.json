@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "f958c9d7-94e2-41e8-b90f-aadeadaaa481",
+		"name": "cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9090/product-list?category_id=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9090",
+					"path": [
+						"product-list"
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Product List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9090/product-list?category_id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9090",
+							"path": [
+								"product-list"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2020 14:15:09 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"products\": [\n            {\n                \"id\": 198281,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10238055_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10238055_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Fresh Milk - Regular\",\n                \"slug\": \"meiji-fresh-milk-2lt-10238055\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 5.8\n                    }\n                ]\n            },\n            {\n                \"id\": 1114858,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_BXL1.jpg\"\n                ],\n                \"name\": \"F&N Magnolia Fresh Milk\",\n                \"slug\": \"magnolia-fresh-milk-1lt-13022014\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1100323,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12529008_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12529008_LXL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Full Cream\",\n                \"slug\": \"marigold-uht-milk-full-cream-1lt-12529008\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198282,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10549750_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10549750_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Low Fat Fresh Milk - Regular\",\n                \"slug\": \"meiji-low-fat-fresh-milk-2lt-10549750\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 5.8\n                    }\n                ]\n            },\n            {\n                \"id\": 199452,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12468436_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12468436_LXL1.jpg\"\n                ],\n                \"name\": \"Marigold 100% Fresh Bottle Milk\",\n                \"slug\": \"marigold-100-fresh-milk-2lt-12468436\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 5.6000000000000005\n                    }\n                ]\n            },\n            {\n                \"id\": 1114804,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/131467_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/131467_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/131467_BXL1.jpg\"\n                ],\n                \"name\": \"Marigold HL Milk - Plain\",\n                \"slug\": \"marigold-hl-milk-plain-1lt-131467\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198821,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/11898581_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/11898581_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/11898581_BXL1.jpg\"\n                ],\n                \"name\": \"FairPrice UHT Milk - Full Cream\",\n                \"slug\": \"fairprice-uht-milk-full-cream-1lt-11898581\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193151,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/458564_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/458564_BXL1.jpg\"\n                ],\n                \"name\": \"Farmhouse Milk - Fresh\",\n                \"slug\": \"farmhouse-fresh-milk-1lt-458564\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193405,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13053232_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13053232_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Low Fat Yoghurt - Mango\",\n                \"slug\": \"meiji-low-fat-yoghurt-mango-140g-13053232\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193156,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/497108_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/497108_BXL1.jpg\"\n                ],\n                \"name\": \"Farmhouse Milk - Low Fat\",\n                \"slug\": \"farmhouse-high-calcium-low-fat-milk-1lt-497108\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1100289,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_BXL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Chocolate\",\n                \"slug\": \"marigold-uht-milk-chocolate-1lt-84905\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193344,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12689108_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12689108_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12689108_BXL1.jpg\"\n                ],\n                \"name\": \"Fortune Silken Egg Tofu - Extra Smooth with Omega 3 (Tube)\",\n                \"slug\": \"fortune-egg-tofu-with-omega-3-150g-12689108\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0.8\n                    }\n                ]\n            },\n            {\n                \"id\": 1102828,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_BXL1.jpg\"\n                ],\n                \"name\": \"Farmhouse UHT Milk - Fresh\",\n                \"slug\": \"farmhouse-uht-fresh-milk-1lt-13007965\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198694,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_BXL1.jpg\"\n                ],\n                \"name\": \"Paul's Fresh Milk - Full Cream\",\n                \"slug\": \"pauls-fresh-milk-1lt-13081538\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1100292,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_BXL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Low Fat\",\n                \"slug\": \"marigold-uht-milk-low-fat-1lt-331546\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198311,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12287803_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12287803_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Low Fat Fresh Milk - Chocolate\",\n                \"slug\": \"meiji-chocolate-milk-2lt-12287803\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 5.8\n                    }\n                ]\n            },\n            {\n                \"id\": 199889,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10553397_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10553397_BXL1.jpg\"\n                ],\n                \"name\": \"F&N NutriSoy High Calcium Fresh Soya Milk - Reduced Sugar\",\n                \"slug\": \"f-n-nutrisoy-fresh-soya-milk-high-calcium-reduced-sugar-1l-10553397\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1111705,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13085415_XL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Full Cream\",\n                \"slug\": \"marigold-uht-milk-packet-6s-full-cream-200ml-13085415\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 3.7\n                    }\n                ]\n            },\n            {\n                \"id\": 193335,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12510147_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12510147_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12510147_BXL1.jpg\"\n                ],\n                \"name\": \"Fortune Japanese Silken Tofu - Omega 3 DHA\",\n                \"slug\": \"fortune-silken-tofu-japanese-with-omega-3-300g-12510147\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0.85\n                    }\n                ]\n            },\n            {\n                \"id\": 193273,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/158841_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/158841_LXL1.jpg\"\n                ],\n                \"name\": \"DoDo Fishball\",\n                \"slug\": \"dodo-fishball-200g-158841\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            }\n        ]\n    },\n    \"base\": {\n        \"Error\": \"\"\n    }\n}"
+				},
+				{
+					"name": "Product List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9090/product-list?category_id=3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9090",
+							"path": [
+								"product-list"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2020 14:14:44 GMT"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"products\": [\n            {\n                \"id\": 198281,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10238055_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10238055_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Fresh Milk - Regular\",\n                \"slug\": \"meiji-fresh-milk-2lt-10238055\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 5.8\n                    }\n                ]\n            },\n            {\n                \"id\": 1114858,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_BXL1.jpg\"\n                ],\n                \"name\": \"F&N Magnolia Fresh Milk\",\n                \"slug\": \"magnolia-fresh-milk-1lt-13022014\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1100323,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12529008_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12529008_LXL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Full Cream\",\n                \"slug\": \"marigold-uht-milk-full-cream-1lt-12529008\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198282,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10549750_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10549750_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Low Fat Fresh Milk - Regular\",\n                \"slug\": \"meiji-low-fat-fresh-milk-2lt-10549750\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 5.8\n                    }\n                ]\n            },\n            {\n                \"id\": 199452,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12468436_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12468436_LXL1.jpg\"\n                ],\n                \"name\": \"Marigold 100% Fresh Bottle Milk\",\n                \"slug\": \"marigold-100-fresh-milk-2lt-12468436\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 5.6000000000000005\n                    }\n                ]\n            },\n            {\n                \"id\": 1114804,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/131467_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/131467_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/131467_BXL1.jpg\"\n                ],\n                \"name\": \"Marigold HL Milk - Plain\",\n                \"slug\": \"marigold-hl-milk-plain-1lt-131467\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198821,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/11898581_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/11898581_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/11898581_BXL1.jpg\"\n                ],\n                \"name\": \"FairPrice UHT Milk - Full Cream\",\n                \"slug\": \"fairprice-uht-milk-full-cream-1lt-11898581\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193151,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/458564_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/458564_BXL1.jpg\"\n                ],\n                \"name\": \"Farmhouse Milk - Fresh\",\n                \"slug\": \"farmhouse-fresh-milk-1lt-458564\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193405,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13053232_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13053232_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Low Fat Yoghurt - Mango\",\n                \"slug\": \"meiji-low-fat-yoghurt-mango-140g-13053232\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193156,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/497108_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/497108_BXL1.jpg\"\n                ],\n                \"name\": \"Farmhouse Milk - Low Fat\",\n                \"slug\": \"farmhouse-high-calcium-low-fat-milk-1lt-497108\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1100289,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/84905_BXL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Chocolate\",\n                \"slug\": \"marigold-uht-milk-chocolate-1lt-84905\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 193344,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12689108_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12689108_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12689108_BXL1.jpg\"\n                ],\n                \"name\": \"Fortune Silken Egg Tofu - Extra Smooth with Omega 3 (Tube)\",\n                \"slug\": \"fortune-egg-tofu-with-omega-3-150g-12689108\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0.8\n                    }\n                ]\n            },\n            {\n                \"id\": 1102828,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13007965_BXL1.jpg\"\n                ],\n                \"name\": \"Farmhouse UHT Milk - Fresh\",\n                \"slug\": \"farmhouse-uht-fresh-milk-1lt-13007965\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198694,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13081538_BXL1.jpg\"\n                ],\n                \"name\": \"Paul's Fresh Milk - Full Cream\",\n                \"slug\": \"pauls-fresh-milk-1lt-13081538\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1100292,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_RXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/331546_BXL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Low Fat\",\n                \"slug\": \"marigold-uht-milk-low-fat-1lt-331546\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 198311,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12287803_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12287803_LXL1.jpg\"\n                ],\n                \"name\": \"Meiji Low Fat Fresh Milk - Chocolate\",\n                \"slug\": \"meiji-chocolate-milk-2lt-12287803\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 5.8\n                    }\n                ]\n            },\n            {\n                \"id\": 199889,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10553397_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/10553397_BXL1.jpg\"\n                ],\n                \"name\": \"F&N NutriSoy High Calcium Fresh Soya Milk - Reduced Sugar\",\n                \"slug\": \"f-n-nutrisoy-fresh-soya-milk-high-calcium-reduced-sugar-1l-10553397\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0\n                    }\n                ]\n            },\n            {\n                \"id\": 1111705,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13085415_XL1.jpg\"\n                ],\n                \"name\": \"Marigold UHT Packet Milk - Full Cream\",\n                \"slug\": \"marigold-uht-milk-packet-6s-full-cream-200ml-13085415\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 3.7\n                    }\n                ]\n            },\n            {\n                \"id\": 193335,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12510147_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12510147_LXL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/12510147_BXL1.jpg\"\n                ],\n                \"name\": \"Fortune Japanese Silken Tofu - Omega 3 DHA\",\n                \"slug\": \"fortune-silken-tofu-japanese-with-omega-3-300g-12510147\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    },\n                    {\n                        \"price\": 0.85\n                    }\n                ]\n            },\n            {\n                \"id\": 193273,\n                \"images\": [\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/158841_XL1.jpg\",\n                    \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/158841_LXL1.jpg\"\n                ],\n                \"name\": \"DoDo Fishball\",\n                \"slug\": \"dodo-fishball-200g-158841\",\n                \"status\": \"ENABLED\",\n                \"price\": 0,\n                \"offers\": [\n                    {\n                        \"price\": 0\n                    }\n                ]\n            }\n        ]\n    },\n    \"base\": {\n        \"Error\": \"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Product Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:9090/product-detail/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9090",
+					"path": [
+						"product-detail",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "none"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9,hi;q=0.8"
+					},
+					{
+						"key": "Cookie",
+						"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:9090/get-cart",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9090",
+					"path": [
+						"get-cart"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Cart",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Pragma",
+								"value": "no-cache"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache"
+							},
+							{
+								"key": "Upgrade-Insecure-Requests",
+								"value": "1"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+							},
+							{
+								"key": "Sec-Fetch-User",
+								"value": "?1"
+							},
+							{
+								"key": "Accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "none"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "navigate"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,hi;q=0.8"
+							},
+							{
+								"key": "Cookie",
+								"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:9090/get-cart",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9090",
+							"path": [
+								"get-cart"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2020 14:24:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "711"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"cart\": {\n            \"cart_id\": 14,\n            \"user_id\": 1,\n            \"TotalPrice\": 0,\n            \"products\": [\n                {\n                    \"id\": 1114858,\n                    \"images\": [\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_XL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_LXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_RXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_BXL1.jpg\"\n                    ],\n                    \"name\": \"F&N Magnolia Fresh Milk\",\n                    \"slug\": \"magnolia-fresh-milk-1lt-13022014\",\n                    \"status\": \"ENABLED\",\n                    \"price\": 0,\n                    \"offers\": null,\n                    \"qty\": 6,\n                    \"TotalPrice\": 0\n                }\n            ]\n        }\n    },\n    \"base\": {\n        \"Error\": \"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "none"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9,hi;q=0.8"
+					},
+					{
+						"key": "Cookie",
+						"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:9090/add-to-cart?product_id=198281&quantity=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9090",
+					"path": [
+						"add-to-cart"
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "198281"
+						},
+						{
+							"key": "quantity",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Add product to cart and redirect to cart page"
+			},
+			"response": [
+				{
+					"name": "Get Cart",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Pragma",
+								"value": "no-cache"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache"
+							},
+							{
+								"key": "Upgrade-Insecure-Requests",
+								"value": "1"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+							},
+							{
+								"key": "Sec-Fetch-User",
+								"value": "?1"
+							},
+							{
+								"key": "Accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "none"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "navigate"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,hi;q=0.8"
+							},
+							{
+								"key": "Cookie",
+								"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:9090/get-cart",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9090",
+							"path": [
+								"get-cart"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2020 14:24:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "711"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"cart\": {\n            \"cart_id\": 14,\n            \"user_id\": 1,\n            \"TotalPrice\": 0,\n            \"products\": [\n                {\n                    \"id\": 1114858,\n                    \"images\": [\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_XL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_LXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_RXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_BXL1.jpg\"\n                    ],\n                    \"name\": \"F&N Magnolia Fresh Milk\",\n                    \"slug\": \"magnolia-fresh-milk-1lt-13022014\",\n                    \"status\": \"ENABLED\",\n                    \"price\": 0,\n                    \"offers\": null,\n                    \"qty\": 6,\n                    \"TotalPrice\": 0\n                }\n            ]\n        }\n    },\n    \"base\": {\n        \"Error\": \"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Remove from  Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "none"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9,hi;q=0.8"
+					},
+					{
+						"key": "Cookie",
+						"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:9090/remove-from-cart?product_id=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9090",
+					"path": [
+						"remove-from-cart"
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "4"
+						}
+					]
+				},
+				"description": "Remove product from cart"
+			},
+			"response": [
+				{
+					"name": "Get Cart",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Pragma",
+								"value": "no-cache"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache"
+							},
+							{
+								"key": "Upgrade-Insecure-Requests",
+								"value": "1"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+							},
+							{
+								"key": "Sec-Fetch-User",
+								"value": "?1"
+							},
+							{
+								"key": "Accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "none"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "navigate"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,hi;q=0.8"
+							},
+							{
+								"key": "Cookie",
+								"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:9090/get-cart",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9090",
+							"path": [
+								"get-cart"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2020 14:24:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "711"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"cart\": {\n            \"cart_id\": 14,\n            \"user_id\": 1,\n            \"TotalPrice\": 0,\n            \"products\": [\n                {\n                    \"id\": 1114858,\n                    \"images\": [\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_XL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_LXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_RXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_BXL1.jpg\"\n                    ],\n                    \"name\": \"F&N Magnolia Fresh Milk\",\n                    \"slug\": \"magnolia-fresh-milk-1lt-13022014\",\n                    \"status\": \"ENABLED\",\n                    \"price\": 0,\n                    \"offers\": null,\n                    \"qty\": 6,\n                    \"TotalPrice\": 0\n                }\n            ]\n        }\n    },\n    \"base\": {\n        \"Error\": \"\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "none"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9,hi;q=0.8"
+					},
+					{
+						"key": "Cookie",
+						"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:9090/add-to-cart?product_id=198281&quantity=4&cart_update=7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9090",
+					"path": [
+						"add-to-cart"
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "198281"
+						},
+						{
+							"key": "quantity",
+							"value": "4"
+						},
+						{
+							"key": "cart_update",
+							"value": "7"
+						}
+					]
+				},
+				"description": "update quantity of product in cart, and redirect to cart page"
+			},
+			"response": [
+				{
+					"name": "Get Cart",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Pragma",
+								"value": "no-cache"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache"
+							},
+							{
+								"key": "Upgrade-Insecure-Requests",
+								"value": "1"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"
+							},
+							{
+								"key": "Sec-Fetch-User",
+								"value": "?1"
+							},
+							{
+								"key": "Accept",
+								"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "none"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "navigate"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,hi;q=0.8"
+							},
+							{
+								"key": "Cookie",
+								"value": "ntuc=MTU3ODQ5MzAzMXxEdi1CQkFFQ180SUFBUkFCRUFBQV82RF9nZ0FEQm5OMGNtbHVad3dIQUFWemRHRjBaUVp6ZEhKcGJtY01MZ0FzVlhZek9FSjVSME5hVlRoWFVERTRVRzF0U1dSamNGWnRlREF3VVVFemVFNWxOM05GUWpsSWFYaHJhejBHYzNSeWFXNW5EQWtBQjNWelpYSXRhV1FGYVc1ME5qUUVBZ0FDQm5OMGNtbHVad3dNQUFwMWMyVnlMV1Z0WVdsc0JuTjBjbWx1Wnd3YkFCbHFZV2RuWlhKdVlYVjBaSEpwZG1WQVoyMWhhV3d1WTI5dHzrmKomO997xQw56hIARvr5jy9cYWcp1_NVj41TFMjI-Q=="
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:9090/get-cart",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9090",
+							"path": [
+								"get-cart"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Jan 2020 14:24:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "711"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"cart\": {\n            \"cart_id\": 14,\n            \"user_id\": 1,\n            \"TotalPrice\": 0,\n            \"products\": [\n                {\n                    \"id\": 1114858,\n                    \"images\": [\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_XL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_LXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_RXL1.jpg\",\n                        \"https://s3-ap-southeast-1.amazonaws.com/www8.fairprice.com.sg/fpol/media/images/product/XL/13022014_BXL1.jpg\"\n                    ],\n                    \"name\": \"F&N Magnolia Fresh Milk\",\n                    \"slug\": \"magnolia-fresh-milk-1lt-13022014\",\n                    \"status\": \"ENABLED\",\n                    \"price\": 0,\n                    \"offers\": null,\n                    \"qty\": 6,\n                    \"TotalPrice\": 0\n                }\n            ]\n        }\n    },\n    \"base\": {\n        \"Error\": \"\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
