@@ -2,6 +2,7 @@ package api
 
 import (
 	"errors"
+	"github.com/itsmeadi/cart/src/entities/constants"
 	"github.com/itsmeadi/cart/src/entities/models"
 	"github.com/itsmeadi/cart/src/templatego"
 	"log"
@@ -26,10 +27,11 @@ func (api *API) AddToCart(w http.ResponseWriter, r *http.Request) (interface{}, 
 	qtyStr := r.FormValue("quantity")
 	qty, err := strconv.ParseInt(qtyStr, 10, 64)
 	if err != nil || qty == 0 {
-		//return nil, errors.New("invalid quantity")
 		qty = 1
 	}
-	productId = 4
+	//productId = 4		//TODO
+
+	var errMsg string
 	cartUpdateStr := r.FormValue("cart_update")
 	cartUpdate, err := strconv.ParseInt(cartUpdateStr, 10, 64)
 	if cartUpdate != 0 {
@@ -37,10 +39,13 @@ func (api *API) AddToCart(w http.ResponseWriter, r *http.Request) (interface{}, 
 	} else {
 		err = api.Interactor.Cart.AddToCart(ctx, userId, productId, qty)
 	}
-	if err != nil {
+	if err != nil && err == constants.ERRPRODUCTUNAVAILABLE {
+		errMsg = err.Error()
+	} else if err != nil {
 		log.Println("[API][AddToCart][AddToCart]", err)
 	}
-	http.Redirect(w, r, "/cart", http.StatusSeeOther)
+
+	http.Redirect(w, r, "/cart?err_msg="+errMsg, http.StatusSeeOther)
 	return nil, err
 }
 
@@ -65,7 +70,6 @@ func (api *API) RemoveFromCart(w http.ResponseWriter, r *http.Request) (interfac
 	}
 	http.Redirect(w, r, "/cart", http.StatusSeeOther)
 	return nil, err
-	//
 }
 
 func (api *API) GetCart(w http.ResponseWriter, r *http.Request) (interface{}, error) {
@@ -100,9 +104,11 @@ func (api *API) ShowCart(w http.ResponseWriter, r *http.Request) {
 	qtemplate := struct {
 		Cart      models.CartDetail
 		UserEmail string
+		ErrorMsg  string
 	}{
 		Cart:      cart,
 		UserEmail: email,
+		ErrorMsg:  r.FormValue("err_msg"),
 	}
 	if err := templatego.TemplateMap["cart"].Execute(w, qtemplate); err != nil {
 		log.Printf("[ERROR] [Question] Render page error: %s\n", err)

@@ -99,6 +99,12 @@ func InitCartUseCase(uc CartUseCase) CartUseCase {
 
 func (cart *CartUseCase) AddToCart(ctx context.Context, userId, productId, qty int64) error {
 
+	product, err := cart.Products.GetProductDetailById(ctx, productId)
+
+	if err != nil || product.ID == 0 {
+		return constants.ERRPRODUCTUNAVAILABLE //TODO
+	}
+
 	crt, err := cart.CartRepo.GetCart(ctx, userId)
 	if err != nil {
 		return err

@@ -31,8 +31,8 @@ type Conf struct {
 }
 
 type GoogleCredentials struct {
-	Cid     string
-	Csecret string
+	Cid         string
+	Csecret     string
 	RedirectUrl string
 }
 
