@@ -16,11 +16,9 @@ func (api *API) ProductDetail(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "text/html")
 
-	vars := mux.Vars(r)
-
-	idStr := vars["id"]
-
+	idStr := r.FormValue("id")
 	id, err := strconv.ParseInt(idStr, 10, 64)
+
 	if err != nil || id == 0 {
 		w.WriteHeader(http.StatusUnauthorized)
 		errors.New("invalid category id")

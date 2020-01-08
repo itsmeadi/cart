@@ -41,7 +41,7 @@ func (api *API) InitRoutes(r *mux.Router) {
 	r.HandleFunc("/auth", api.authHandler)
 
 	//FrontEnd APIs
-	r.HandleFunc("/detail/{id}", api.ProductDetail)
+	r.HandleFunc("/detail", api.ProductDetail)
 	r.HandleFunc("/cart", api.Auth(api.ShowCart))
 	r.HandleFunc("/products", api.Auth(api.ProductList))
 
