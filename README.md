@@ -15,3 +15,4 @@ Config File - files/config.ini
 Db file - files/db.sql  
 API - src/interfaces/web/api/api.go  
 open url `http://127.0.0.1:9090/login`
+Linux Binary - dist/appLinux

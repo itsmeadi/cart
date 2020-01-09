@@ -14,7 +14,7 @@ WORKDIR /go/src/github.com/itsmeadi/cart
 COPY . .
 
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-RUN dep init
+RUN dep init||true
 RUN dep ensure -v
 
 RUN ./files/init.sh
