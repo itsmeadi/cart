@@ -6,6 +6,7 @@ import (
 	"errors"
 	"log"
 	"net/http"
+	"strings"
 )
 
 type Handler func(w http.ResponseWriter, r *http.Request)
@@ -46,6 +47,18 @@ func (api *API) Wrapper(hand func(w http.ResponseWriter, r *http.Request) (inter
 				log.Println("Error while Writing Response=", err)
 			}
 		})
+}
+
+
+func noListing(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path == "" || strings.HasSuffix(r.URL.Path, "/") {
+			http.Redirect(w, r, "/login", http.StatusSeeOther)
+			return
+		}
+
+		next.ServeHTTP(w, r)
+	})
 }
 
 func GetUserId(ctx context.Context) int64 {

@@ -45,7 +45,7 @@ func (api *API) InitRoutes(r *mux.Router) {
 	r.HandleFunc("/cart", api.Auth(api.ShowCart))
 	r.HandleFunc("/products", api.Auth(api.ProductList))
 
-	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("./frontend/vegefoods"))))
+	r.PathPrefix("/").Handler(http.StripPrefix("/", noListing(http.FileServer(http.Dir("./frontend/vegefoods")))))
 
 	http.Handle("/", r)
 
