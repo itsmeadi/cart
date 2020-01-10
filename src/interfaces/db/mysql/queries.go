@@ -20,10 +20,9 @@ var (
 
 	getCartItemsByUser = `select c.id as cart_id, c.user_id as user_id, i.product_id as product_id, i.qty as qty from cart as c, cart_items as i 
 							where c.user_id=? and c.id=i.cart_id and c.status=? and i.status=?`
-	//getCartItemsByUserAndProductId = `select c.id as cart_id, c.user_id as user_id, i.product_id as product_id, i.qty as qty from cart as c, cart_items as i left join
-	//						where c.user_id=? and c.id=i.cart_id and i.product_id=? and c.status=? and i.status=?`
-	getCartItemsByUserAndProductId = `select c.id as cart_id, c.user_id as user_id, i.product_id as product_id, i.qty as qty from cart as c left join cart_items as i
-							on c.id=i.cart_id where c.user_id=? and i.product_id=? and c.status=? and i.status=?`
+
+	getCartItemsByUserAndProductId = `select c.id as cart_id, c.user_id as user_id, i.product_id as product_id, i.qty as qty from cart as c ,cart_items as i
+							where c.id=i.cart_id and c.user_id=? and i.product_id=? and c.status=? and i.status=?`
 
 	getUserBySub = `select id from NTUC.user where sub=?`
 	addUser      = `insert into NTUC.user (sub) values(?)`
