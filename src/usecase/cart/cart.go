@@ -108,7 +108,6 @@ func (cart *CartUseCase) RemoveProductFromCart(ctx context.Context, productId, u
 	if err != nil || len(crt) == 0 {
 		return err
 	}
-	productId = 4
 	_, err = cart.CartItemsRepo.UpdateCartQty(ctx, 0, crt[0].ID, productId)
 	return err
 }
