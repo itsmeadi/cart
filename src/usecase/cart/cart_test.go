@@ -28,6 +28,7 @@ func TestAddToCart(t *testing.T) {
 		MockGetCart            func(mock *mock_repositories.MockCart, args Args)
 		MockGetProductFromCart func(mock *mock_repositories.MockCartItems, args Args)
 		MockInsertItemInCart   func(mock *mock_repositories.MockCartItems, args Args)
+		MockGetProductDetailById   func(mock *mock_repositories.MockProduct, args Args)
 
 		wantErr bool
 	}{
@@ -67,6 +68,16 @@ func TestAddToCart(t *testing.T) {
 					Status:    constants.StatusActive,
 				}).Return(int64(1), nil)
 			},
+			func(mock *mock_repositories.MockProduct, args Args) {
+				mock.EXPECT().GetProductDetailById(gomock.Any(), args.productId).Return(models.Product{
+					ID:     args.productId,
+					Images: nil,
+					Name:   "",
+					Slug:   "",
+					Status: "",
+					Price:  0,
+				}, nil)
+			},
 			false,
 		},
 	}
@@ -90,6 +101,7 @@ func TestAddToCart(t *testing.T) {
 		tt.MockGetCart(mockCart, tt.args)
 		tt.MockInsertItemInCart(mockCartItemsRepo, tt.args)
 		tt.MockGetProductFromCart(mockCartItemsRepo, tt.args)
+		tt.MockGetProductDetailById(mockProducts, tt.args)
 		err := cartUseCaseMock.AddToCart(tt.args.ctx, tt.args.userId, tt.args.productId, tt.args.qty)
 		if (err == nil) == tt.wantErr {
 			t.Errorf("Case Failed=%+v", tt.name)
