@@ -49,7 +49,6 @@ func (api *API) Wrapper(hand func(w http.ResponseWriter, r *http.Request) (inter
 		})
 }
 
-
 func noListing(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "" || strings.HasSuffix(r.URL.Path, "/") {
