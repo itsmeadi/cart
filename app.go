@@ -18,7 +18,6 @@ import (
 func main() {
 
 	conf := config.CF
-
 	mysql.InitDb(conf.DB)
 
 	productCache := cache.InitProductCache(conf.PrdCache.Timeout, conf.PrdCache.CacheResetTimeOut)
@@ -26,7 +25,6 @@ func main() {
 	productList := productByCategory.InitService(conf.ProductList.Url, conf.ProductList.Timeout)
 
 	db := mysql.GetDb()
-
 	cartUC := cart.InitCartUseCase(cart.CartUseCase{
 		CartItemsRepo:     db,
 		CartXCartItemRepo: db,
